@@ -1,0 +1,71 @@
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+
+  --ff-poppins: "Poppins", sans-serif;
+
+  --radiusBig: 32px;
+  --radiusMedium: 16px;
+  --radiusSmall: 5px;
+  --radiusCircle: 50%;
+}
+
+/*-----reset-----*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-text);
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/*-----utilities-----*/
+.hidden {
+  display: none;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+/*-----main-----*/
+
+body {
+  font-family: var(--ff-poppins);
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: var(--color-white);
+  display: grid;
+  place-content: center;
+}

@@ -19,6 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -64,7 +65,7 @@ img {
 body {
   font-family: var(--ff-poppins);
   color: var(--color-white);
-  font-weight: 400
+  font-weight: 400;
   margin: 0;
   display: grid;
   place-content: center;
@@ -94,12 +95,11 @@ body::before {
 .container {
   width: 100%;
   margin: 3.125rem auto 0 auto;
-
 }
 
-header{
-    padding-inline: 4rem;
-    margin-bottom: 2rem
+header {
+  padding-inline: 4rem;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -107,43 +107,54 @@ h1 {
   font-weight: 400;
 }
 
-p{
-    font-size: 1.125rem;
-    font-weight: 200;
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
 }
 
-#survey{
-    background-color: var(--color-darkblue-alpha);
-    border-radius: var(--radiusSmall);
-    padding: 2rem;
+#survey {
+  background-color: var(--color-darkblue-alpha);
+  border-radius: var(--radiusSmall);
+  padding: 2rem;
 }
 
-.form-item{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    
+.form-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
-.form-item label{
-    text-align: left;
-    margin-bottom: 1rem;
-   
+.form-item label {
+  display: flex;
+  gap: 1rem;
+  padding-block: 0.5rem;
 }
 
 .form-item input,
-.form-item select, 
-textarea{
-    padding: 0.5rem 1rem;
-    border-radius: var(--radiusSmall);
-    color: var(--color-darkblue-alpha)
+.form-item select,
+textarea {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radiusSmall);
+  color: var(--color-darkblue-alpha);
+  border: 1px solid gray;
 }
 
-.submit-btn{
-    background-color: var(--color-green);
-    color: var(--color-white);
-    width: 95%;
-    padding: 0.5rem;
-    border-radius: var(--radiusSmall);
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #1a456f;
 }
 
+.submit-btn {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  width: 95%;
+  padding: 0.5rem;
+  border-radius: var(--radiusSmall);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  cursor: pointer;
+  background-color: #04f862;
+}

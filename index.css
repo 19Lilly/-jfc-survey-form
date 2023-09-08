@@ -1,0 +1,160 @@
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+
+  --ff-poppins: "Poppins", sans-serif;
+
+  --radiusBig: 32px;
+  --radiusMedium: 16px;
+  --radiusSmall: 5px;
+  --radiusCircle: 50%;
+}
+
+/*-----reset-----*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-text);
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/*-----utilities-----*/
+.hidden {
+  display: none;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+/*-----main-----*/
+
+body {
+  font-family: var(--ff-poppins);
+  color: var(--color-white);
+  font-weight: 400;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+header {
+  padding-inline: 4rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+#survey {
+  background-color: var(--color-darkblue-alpha);
+  border-radius: var(--radiusSmall);
+  padding: 2rem;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.form-item label {
+  display: flex;
+  gap: 1rem;
+  padding-block: 0.5rem;
+}
+
+.form-item input,
+.form-item select,
+textarea {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radiusSmall);
+  color: var(--color-darkblue-alpha);
+  border: 1px solid gray;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #1a456f;
+}
+
+.submit-btn {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  width: 95%;
+  padding: 0.5rem;
+  border-radius: var(--radiusSmall);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  cursor: pointer;
+  background-color: #04f862;
+}
